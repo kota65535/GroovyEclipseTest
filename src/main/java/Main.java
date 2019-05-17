@@ -1,13 +1,13 @@
 
+
 public class Main {
-    public static void main(String[] args) {
-        JavaModel javaModel = new JavaModel();
-        GroovyModel groovyModel = new GroovyModel();
-        groovyModel.getName();
-        GroovyModelWithAST groovyModelWithAST = GroovyModelWithAST.builder()
-                .name("hoge")
-                .build();
-        System.out.println(javaModel.getName());
-        System.out.println(groovyModelWithAST.getName());
-    }
+
+  public static void main(String[] args) {
+    // Use Groovy AST transformed class from Java
+    GroovyModel.builder().foo(1).build();
+    // Use Lombok annotated class from Java
+    JavaModel.builder().bar(1).build();
+    // Use Lombok annotated class from Groovy
+    new JavaModelContainer(1);
+  }
 }

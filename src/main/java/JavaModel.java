@@ -1,11 +1,6 @@
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Builder;
 
-/**
- * Created by tozawa on 2019/02/24.
- */
-@Setter
-@Getter
+@Builder
 public class JavaModel {
-    private String name;
+  private int bar;
 }
